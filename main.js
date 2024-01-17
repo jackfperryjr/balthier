@@ -14,7 +14,7 @@ function isTodayANewDay() {
 };
 
 function getNumbersFromToday() {
-    balls = localStorage.getItem('balthier-numbers');
+    localStorage.getItem('balthier-numbers') == null ? beginANewDay() : balls = localStorage.getItem('balthier-numbers');
     console.log('Balls have been retrieved.');
 };
 
