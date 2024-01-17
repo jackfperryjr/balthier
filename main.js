@@ -10,7 +10,7 @@ window.onload = function() {
 function isTodayANewDay() {
     let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
     let x = localStorage.getItem('balthier-date');
-    return x == today ? false : true;
+    return x == today ? true : false;
 };
 
 function getNumbersFromToday() {
