@@ -28,7 +28,7 @@ function beginANewDay() {
 };
 
 function deliverNumbers() {
-    document.getElementById('numbers').innerHTML = numbers;
+    document.getElementById('numbers').innerHTML = balls;
     console.log('Balls have been delivered.');
 };
 
