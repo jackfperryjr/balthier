@@ -32,9 +32,9 @@ function deliverNumbers() {
     const ballElement = document.getElementById('numbers');
     ballArray.forEach(function(e, i) {
         if (i == (ballArray.length - 1)) {
-            ballElement.innerHTML += `<span class="p-3 bg-danger border border-danger text-bold text-white rounded-circle text-center flex-ball">${e}</span>`;
+            ballElement.innerHTML += `<span class="p-3 bg-danger border border-danger text-strong text-white rounded-circle text-center flex-ball">${e}</span>`;
         } else {
-            ballElement.innerHTML += `<span class="p-3 bg-white border border-white text-bold text-danger rounded-circle text-center flex-ball">${e}</span>`;
+            ballElement.innerHTML += `<span class="p-3 bg-white border border-white text-strong text-danger rounded-circle text-center flex-ball">${e}</span>`;
         }
     });
     console.log('Balls have been delivered.');
