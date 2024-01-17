@@ -1,5 +1,6 @@
 let whiteBalls = [61,32,63,21,36,23,69,37,62,39,26,41,16,28,22,42,9]
 let redBalls = [18,24,4,14,26]
+let balls = [];
 
 window.onload = function() {
     isTodayANewDay() ? getNumbersFromToday() : beginANewDay();
@@ -12,15 +13,19 @@ function isTodayANewDay() {
     return x == today ? false : true;
 };
 
+function getNumbersFromToday() {
+    balls = localStorage.getItem('balthier-numbers');
+};
+
 function beginANewDay() {
     let today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
     let newNumbers = addRedBall(redBalls, getWhiteBalls(whiteBalls));
     localStorage.setItem('balthier-date', today);
     localStorage.setItem('balthier-numbers', newNumbers);
+    getNumbersFromToday();
 };
 
 function deliverNumbers() {
-    let numbers = addRedBall(redBalls, getWhiteBalls(whiteBalls));
     document.getElementById('numbers').innerHTML = numbers;
 };
 
