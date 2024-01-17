@@ -15,6 +15,7 @@ function isTodayANewDay() {
 
 function getNumbersFromToday() {
     balls = localStorage.getItem('balthier-numbers');
+    console.log('Balls have been retrieved.');
 };
 
 function beginANewDay() {
@@ -22,11 +23,13 @@ function beginANewDay() {
     let newNumbers = addRedBall(redBalls, getWhiteBalls(whiteBalls));
     localStorage.setItem('balthier-date', today);
     localStorage.setItem('balthier-numbers', newNumbers);
+    console.log('Balls have been stored.');
     getNumbersFromToday();
 };
 
 function deliverNumbers() {
     document.getElementById('numbers').innerHTML = numbers;
+    console.log('Balls have been delivered.');
 };
 
 function getWhiteBalls(x) {
