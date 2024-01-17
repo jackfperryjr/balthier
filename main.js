@@ -1,6 +1,6 @@
 let whiteBalls = [61,32,63,21,36,23,69,37,62,39,26,41,16,28,22,42,9]
 let redBalls = [18,24,4,14,26]
-let balls = [];
+let balls = '';
 
 window.onload = function() {
     isTodayANewDay() ? getNumbersFromToday() : beginANewDay();
@@ -28,6 +28,15 @@ function beginANewDay() {
 };
 
 function deliverNumbers() {
+    const ballArray = balls.split(',');
+    const ballElement = document.getElementById('numbers');
+    ballArray.forEach(function(e, i) {
+        if (i == (ballArray.length - 1)) {
+            ballElement.innerHTML += `<span class="start-100 translate-middle p-2 bg-white border border-white text-bold text-danger rounded-circle">${e}</span>`;
+        } else {
+            ballElement.innerHTML += `<span class="start-100 translate-middle p-2 bg-danger border border-danger text-bold text-white rounded-circle">${e}</span>`;
+        }
+    });
     document.getElementById('numbers').innerHTML = balls;
     console.log('Balls have been delivered.');
 };
