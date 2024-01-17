@@ -32,12 +32,11 @@ function deliverNumbers() {
     const ballElement = document.getElementById('numbers');
     ballArray.forEach(function(e, i) {
         if (i == (ballArray.length - 1)) {
-            ballElement.innerHTML += `<span class="start-100 translate-middle p-2 bg-white border border-white text-bold text-danger rounded-circle">${e}</span>`;
+            ballElement.innerHTML += `<span class="p-3 bg-white border border-white text-bold text-danger rounded-circle text-center">${e}</span>`;
         } else {
-            ballElement.innerHTML += `<span class="start-100 translate-middle p-2 bg-danger border border-danger text-bold text-white rounded-circle">${e}</span>`;
+            ballElement.innerHTML += `<span class="p-3 bg-danger border border-danger text-bold text-white rounded-circle text-center">${e}</span>`;
         }
     });
-    document.getElementById('numbers').innerHTML = balls;
     console.log('Balls have been delivered.');
 };
 
